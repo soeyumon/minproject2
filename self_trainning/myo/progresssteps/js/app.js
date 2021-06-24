@@ -52,5 +52,14 @@ function update(){
 
         //33% and 66%
         progress.style.width = (act / cls) * 100 + "%";
+        if(currentactive === 1){
+            document.body.style.backgroundImage = "url('img/1.jpg')";
+        }else if(currentactive===2){
+            document.body.style.backgroundImage = "url('img/2.jpg')";
+        }else if(currentactive===3){
+            document.body.style.backgroundImage = "url('img/3.jpg')";
+        }else if (currentactive === 4){
+            document.body.style.backgroundImage = "url('img/4.jpg')";
+        }
     });
 }
