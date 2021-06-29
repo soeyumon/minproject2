@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+:root{
+    --primary-color: #34d2eb;
+    --secondary-color: #edd25c;
+
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Courgette', cursive;
+    background-image: url("../img/3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    margin: 0;
+}
+body::before{
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: linear-gradient(rgba(52, 210, 235,0.3),rgba(250, 236, 175,0.3));
+    position: absolute;
+}
+.container{
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 10px 0 10px rgba(0,0,0,0.4);
+
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.login-container{
+    margin-bottom: 10px;
+}
+.login-container .user{
+    font-size: 20px;
+    border:2px solid #f0f0f0;
+    width:200px;
+    padding: 3px 10px;
+    margin-left: 10px;
+
+    font-family: inherit;
+}
+.login-container.error .user {
+    border: 1px solid red;
+}
+.login-container.success .user{
+    border: 1px solid green;
+}
+.login-container.error small{
+    display: block;
+    margin-left: 50px;
+}
+.user::placeholder{
+    color: silver;
+}
+.loginbtn{
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    margin-top: 10px;
+    font-size: 20px;
+
+    cursor: pointer;
+}
+.loginbtn:active{
+    transform: scale(0.95);
+}
+span{
+    color: #999;
+}

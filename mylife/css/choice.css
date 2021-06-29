@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-family: 'Courgette', cursive;
+    margin: 0;
+    overflow: hidden;
+}
+.container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.container .split{
+    /*margin: 0;*/
+    width: 50%;
+    height: 100%;
+    /*background-color: red;*/
+    position: absolute;
+}
+.container .split.left{
+    background-size: cover;
+    background-image: url('../img/5.jpg');
+    background-repeat: no-repeat;
+    /*background-color:peachpuff;*/
+    left: 0;
+}
+.container .split.left:before{
+    content: '';
+    position: absolute;
+    background:linear-gradient(rgba(210, 166, 121,0.5),rgba(179, 92, 0,0.5));
+    width: 100%;
+    height: 100%;
+}
+.container .split.right{
+    background-size: cover;
+    background-image: url('../img/childhood.jpg');
+    /*background-color: pink;*/
+    background-repeat: no-repeat;
+    right: 0;
+}
+.container .split.right:before{
+    content: '';
+    position: absolute;
+    background:linear-gradient(270deg,rgba(153, 153, 153,0.5),rgb(255, 204, 153,0.5));
+    width: 100%;
+    height: 100%;
+}
+.split h1{
+    font-size: 4rem;
+    color: white;
+    position: absolute;
+    text-shadow: 10px 0 10px rgba(0,0,0,0.4);
+    top: 20%;
+    /*justify-items: center;*/
+    left: 50%;
+    transform: translateX(-40%);
+    white-space: nowrap;
+}
+.split .btn{
+    color: #fff;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-top: 30px;
+
+
+    text-decoration: none;
+    font-size: 30px;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+
+}
+.split.left .btn:hover{
+    background-color: red;
+    border: 2px solid red;
+}
+.split.right .btn:hover{
+    background-color: darkblue;
+    border: 2px solid darkblue;
+}
+.container.hover-left .split.left{
+    width: 75%;
+}
+.container.hover-left .split.right{
+    width: 25%;
+}
+.container.hover-right .split.left{
+    width: 25%;
+}
+.container.hover-right .split.right{
+    width: 75%;
+}
+.split.left,.split.left::before,.split.right,.split.right::before{
+    transition: All 1000ms ease-in;
+}
