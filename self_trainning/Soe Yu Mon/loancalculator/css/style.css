@@ -1,0 +1,10 @@
+.bubbleterm{
+    display: flex;
+    justify-content: center;
+}
+.bubble{
+    position: absolute;
+}
+#results,#loading{
+    display: none;
+}
